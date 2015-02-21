@@ -22,6 +22,30 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
+    
+    if(move==="undefined" || move===null){
+        move = getInput();
+    }else
+    {
+        console.log (move);
+        return move;
+    }
+}
+function getComputerMove(move) {
+    
+    if(move ==="undefined" || move === null){
+        move = randomPlay();
+        return move;
+        
+    }
+    else {
+        return move;
+    }
+    
+    
+}
+
+/*function getPlayerMove(move) {
 
     if(move || null){ //if move is defined then true should result and the player move should display, else player is asked to for input
         return move;
@@ -35,7 +59,7 @@ function getPlayerMove(move) {
     return move/* Your Expression */;
 }
 
-function getComputerMove(move) {
+/*function getComputerMove(move) {
     
     if(move || null){ // if move is defined then true should result, else a random play is generated
         return move;
@@ -47,7 +71,7 @@ function getComputerMove(move) {
     return move/* Your Expression */;
 }
 
-function getWinner(playerMove,computerMove) {
+        function getWinner(playerMove,computerMove) {
     var winner;
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.

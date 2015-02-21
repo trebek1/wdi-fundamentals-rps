@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-'use strict';
+x   'use strict';
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
@@ -22,17 +22,29 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
+
+    if(move || null){ //if move is defined then true should result and the player move should display, else player is asked to for input
+        return move;
+        else{
+            move = getInput()
+        }
+    }
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    return move/* Your Expression */;
 }
 
 function getComputerMove(move) {
+    
+    if(move || null){ // if move is defined then true should result, else a random play is generated
+        return move;
+        else{
+            move = randomPlay()
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    return move/* Your Expression */;
 }
 
 function getWinner(playerMove,computerMove) {

@@ -22,9 +22,11 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-    
+    //if move is undefine or null, move is set to getInput() else, use the move and print to screen
     if(move==="undefined" || move===null){
         move = getInput();
+        console.log(move);
+        return move;
     }else
     {
         console.log (move);
@@ -32,46 +34,19 @@ function getPlayerMove(move) {
     }
 }
 function getComputerMove(move) {
-    
+    //if move is undefine or null, move is set to randomPlay() else, use the move and print to screen
     if(move ==="undefined" || move === null){
         move = randomPlay();
+        console.log(move);
         return move;
-        
     }
     else {
+        console.log(move);
         return move;
     }
     
     
-}
-
-/*function getPlayerMove(move) {
-
-    if(move || null){ //if move is defined then true should result and the player move should display, else player is asked to for input
-        return move;
-        else{
-            move = getInput()
-        }
-    }
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return move/* Your Expression */;
-}
-
-/*function getComputerMove(move) {
-    
-    if(move || null){ // if move is defined then true should result, else a random play is generated
-        return move;
-        else{
-            move = randomPlay()
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return move/* Your Expression */;
-}
-
-        function getWinner(playerMove,computerMove) {
+}        function getWinner(playerMove,computerMove) {
     var winner;
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.

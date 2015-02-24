@@ -6,6 +6,7 @@
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
+    
 }
 function randomPlay() {
     var randomNumber = Math.random();
@@ -21,9 +22,11 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
+var move = 'rock'; 
+
 function getPlayerMove(move) {
     //if move is undefine or null, move is set to getInput() else, use the move and print to screen
-    if(move==="undefined" || move===null){
+    if(move==='undefined' || move===null){
         move = getInput();
         console.log(move);
         return move;
@@ -35,7 +38,7 @@ function getPlayerMove(move) {
 }
 function getComputerMove(move) {
     //if move is undefine or null, move is set to randomPlay() else, use the move and print to screen
-    if(move ==="undefined" || move === null){
+    if(move ==='undefined' || move === null){
         move = randomPlay();
         console.log(move);
         return move;
@@ -44,12 +47,15 @@ function getComputerMove(move) {
         console.log(move);
         return move;
     }
-    
-    
-}        function getWinner(playerMove,computerMove) {
+}       
+
+function getWinner(playerMove,computerMove) {
     var winner;
+    var playerMove = 'scissors'; 
+    var computerMove = 'rock';
+    
     switch(playerMove){
-        case rock:
+        case "rock":
             if(computerMove ==='rock'){
                 winner = 'tie';
             }else if(computerMove ==='paper'){
@@ -58,7 +64,7 @@ function getComputerMove(move) {
                 winner = 'player';
             }
             break; 
-        case paper:
+        case "paper":
             if(computerMove ==='rock'){
                 winner = 'player';
             }else if(computerMove ==='paper'){
@@ -66,7 +72,7 @@ function getComputerMove(move) {
             }else if( computerMove ==='scissors'){
                 winner = 'computer';
              }break; 
-        case scissors:
+        case "scissors":
             if(computerMove ==='rock'){
                 winner = 'computer';
             }else if(computerMove ==='paper'){

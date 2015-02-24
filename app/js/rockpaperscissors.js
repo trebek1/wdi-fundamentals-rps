@@ -28,24 +28,28 @@ function getPlayerMove(move) {
     //if move is undefine or null, move is set to getInput() else, use the move and print to screen
     if(move==='undefined' || move===null){
         move = getInput();
+        playerMove = move; 
         console.log(move);
-        return move;
+        return playerMove;
     }else
     {
+        playerMove = move; 
         console.log (move);
-        return move;
+        return playerMove;
     }
 }
 function getComputerMove(move) {
     //if move is undefine or null, move is set to randomPlay() else, use the move and print to screen
     if(move ==='undefined' || move === null){
         move = randomPlay();
+        computerMove = move; 
         console.log(move);
-        return move;
+        return computerMove;
     }
     else {
         console.log(move);
-        return move;
+        computerMove = move; 
+        return computerMove;
     }
 }       
 
